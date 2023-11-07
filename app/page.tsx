@@ -17,40 +17,29 @@ export default function Home() {
 
       <section className="relative place-items-center before:absolute before:h-[200px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
 
-        <h2 className="text-5xl" >Handyman Extraordinaire</h2>    
+        <h1 className="text-5xl" >Handyman Extraordinaire</h1>    
         <h2 className="text-2lg">services ranging from :</h2>
 
-        <div className="bg-white">
-      <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-        <h2 className="text-2xl font-bold tracking-tight text-gray-900">Customers also purchased</h2>
+        <article className="flex mx-auto max-w-xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">           
+          
+            <ul>
+              <li>Ceiling Fans/Lights</li>
+              <li>Switches and Outlets</li>          
+            </ul>  
 
-        <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-          {products.map((product) => (
-            <div key={product.id} className="group relative">
-              <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
-                <img
-                  src={product.imageSrc}
-                  alt={product.imageAlt}
-                  className="h-full w-full object-cover object-center lg:h-full lg:w-full"
-                />
-              </div>
-              <div className="mt-4 flex justify-between">
-                <div>
-                  <h3 className="text-sm text-gray-700">
-                    <a href={product.href}>
-                      <span aria-hidden="true" className="absolute inset-0" />
-                      {product.name}
-                    </a>
-                  </h3>
-                  <p className="mt-1 text-sm text-gray-500">{product.color}</p>
-                </div>
-                <p className="text-sm font-medium text-gray-900">{product.price}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
+            <ul>
+              <li>Sinks & Faucets</li>
+              <li>Floats and Valves</li>
+              <li>Toilets and Wax Rings</li>
+            </ul>
+
+            <ul>
+              <li>Pressure Washing</li>
+              <li>Assembly  </li>
+              <li>Toilets and Wax Rings</li>
+            </ul>
+
+        </article>
 
       </section>
 
