@@ -10,7 +10,7 @@ export default function Home() {
         </p>
 
         <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-            dont hesitate to reach out!
+            dont hesitate to reach out with questions about your diy
         </div>
 
       </div>
@@ -20,25 +20,50 @@ export default function Home() {
         <h1 className="text-5xl" >Handyman Extraordinaire</h1>    
         <h2 className="text-2lg">services ranging from :</h2>
 
-        <article className="flex mx-auto max-w-xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">           
-          
+        <article className="flex mx-auto max-w-xl px-4 py-12 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8 space-x-3">             
             <ul>
+              <li>ELECTRICAL</li>
               <li>Ceiling Fans/Lights</li>
               <li>Switches and Outlets</li>          
             </ul>  
 
             <ul>
+              <li>PLUMBING</li>
               <li>Sinks & Faucets</li>
               <li>Floats and Valves</li>
               <li>Toilets and Wax Rings</li>
             </ul>
 
             <ul>
-              <li>Pressure Washing</li>
-              <li>Assembly  </li>
-              <li>Toilets and Wax Rings</li>
+              <li>PRESSURE WASH</li>
+              <li>Residential</li>
+              <li>Commercial</li>
+              <li>Auto , Boat , RVs</li>
+            </ul>
+        </article>
+        <article className="flex mx-auto max-w-xl px-4 py-8 sm:px-6 sm:py-16 lg:max-w-7xl lg:px-8 space-x-3">
+        <ul>
+              <li>ASSEMBLY</li>
+              <li>IKEA</li>
+              <li>Mechanical</li>
+              <li>Trampolines</li>
+              <li>Sports Equiptment</li>
+              <li>Playscapes</li>          
+            </ul>  
+
+            <ul>
+              <li>HAULING</li>
+              <li>Pick ups and Assemble</li>
+              <li>Deliveries</li>
+              <li>Hot Shot</li>
             </ul>
 
+            <ul>
+              <li>CLEANING</li>
+              <li>Construction</li>
+              <li>Make Ready</li>
+              <li>Home & Auto</li>
+            </ul>
         </article>
 
       </section>
