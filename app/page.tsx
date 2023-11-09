@@ -20,7 +20,7 @@ export default function Home() {
         <h1 className="text-5xl py-8 sm:py-8" >Handyman Extraordinaire</h1>    
         <h2 className="text-2lg">services ranging from but not limited to:</h2>
 
-        <article className="grid grid-cols-3 gap-4 mx-auto max-w-xl px-2 py-8 sm:px-2 sm:py-16 lg:max-w-7xl lg:px-8 space-x-9">             
+        <article className="grid grid-cols-3 gap-4 mx-auto max-w-xl px-2 py-8 sm:px-2 sm:py-16 lg:max-w-7xl lg:px-8 space-x-3">             
             <ul>
               <li>ELECTRICAL</li>
               <li>Ceiling Fans & Lights</li>
@@ -73,9 +73,7 @@ export default function Home() {
               <li>Drywall patching</li>
               <li>Calking & Grout</li>    
               <li>Door Locks, Frame</li>        
-            </ul>   
-        </article>
-        <article className="flex mx-auto max-w-xl px-4 py-10 sm:px-6 sm:py-10 lg:max-w-7xl lg:px-8 space-x-9">             
+            </ul>               
             <ul>
               <li>WELDING</li>
               <li>Fence repairs</li>
