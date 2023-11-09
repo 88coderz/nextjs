@@ -44,7 +44,8 @@ export default function Home() {
               <li>PRESSURE WASH</li>
               <li>Residential</li>
               <li>Commercial</li>
-              <li>Auto , RVs , Boat & Dock</li>
+              <li>Auto & RV </li> 
+              <li>Boat & Dock</li>
             </ul>
             <ul>
               <li>ASSEMBLY</li>
@@ -72,13 +73,13 @@ export default function Home() {
               <li>Flashing & Trim</li>
               <li>Drywall patching</li>
               <li>Calking & Grout</li>    
-              <li>Door Locks, Frame</li>        
+              <li>Door Locks & Frame</li>        
             </ul>               
             <ul>
               <li>WELDING</li>
               <li>Fence repairs</li>
               <li>Railing repairs</li> 
-              <li>Gate Repairs</li>         
+              <li>Gate repairs</li>         
             </ul> 
             <ul>
               <li>AUTOMOTIVE</li>
@@ -88,9 +89,9 @@ export default function Home() {
             </ul> 
             <ul>
               <li>LANDSCAPING</li>
-              <li>Cuts, Trim & Cleaning</li>
+              <li>Cuts, Edge & Clean</li>
               <li>Mulching & Weeding</li>
-              <li>Clearing and DeStumping</li>            
+              <li>Clearing & DeStump</li>            
             </ul>
             <ul>
               <li>DEMOLITION</li>
