@@ -20,13 +20,13 @@ export default function Home() {
         <h1 className="text-5xl py-8 sm:py-8" >Handyman Extraordinaire</h1>    
         <h2 className="text-2lg">services ranging from but not limited to:</h2>
 
-        <article className="flex mx-auto max-w-xl px-4 py-8 sm:px-6 sm:py-16 lg:max-w-7xl lg:px-8 space-x-9">             
+        <article className="grid grid-cols-3 gap-4 mx-auto max-w-xl px-2 py-8 sm:px-2 sm:py-16 lg:max-w-7xl lg:px-8 space-x-9">             
             <ul>
               <li>ELECTRICAL</li>
               <li>Ceiling Fans & Lights</li>
               <li>Switches & Outlets</li>  
-              <li>Smoke Detectors</li>        
-            </ul>  
+              <li>Smoke Detectors</li>
+            </ul>
             <ul>
               <li>PLUMBING</li>
               <li>Sinks & Faucets</li>
@@ -39,23 +39,21 @@ export default function Home() {
               <li>Shelving</li>
               <li>Art & Mirrors</li>
               <li>Hand & Shower rails</li>
-            </ul> 
+            </ul>
             <ul>
               <li>PRESSURE WASH</li>
               <li>Residential</li>
               <li>Commercial</li>
               <li>Auto , RVs , Boat & Dock</li>
             </ul>
-        </article>
-        <article className="flex mx-auto max-w-xl px-4 py-4 sm:px-6 sm:py-6 lg:max-w-7xl lg:px-8 space-x-9">
-        <ul>
+            <ul>
               <li>ASSEMBLY</li>
               <li>Office pieces</li>
               <li>Furniture</li>
               <li>Trampolines</li>
               <li>Sports Equiptment</li>
               <li>Playscapes</li>          
-            </ul>  
+            </ul>
             <ul>
               <li>HAULING</li>
               <li>Help Moving</li>
@@ -68,7 +66,7 @@ export default function Home() {
               <li>Construction</li>
               <li>Make Ready</li>
               <li>Home & Auto</li>
-            </ul>        
+            </ul>
             <ul>
               <li>HOME REPAIRS</li>
               <li>Flashing & Trim</li>
