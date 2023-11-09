@@ -18,20 +18,20 @@ export default function Home() {
       <section className="relative place-items-center before:absolute before:h-[200px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
 
         <h1 className="text-5xl" >Handyman Extraordinaire</h1>    
-        <h2 className="text-2lg">services ranging from :</h2>
+        <h2 className="text-2lg">services ranging from but not limited to:</h2>
 
-        <article className="flex mx-auto max-w-xl px-4 py-12 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8 space-x-3">             
+        <article className="flex mx-auto max-w-xl px-4 py-8 sm:px-6 sm:py-16 lg:max-w-7xl lg:px-8 space-x-3">             
             <ul>
               <li>ELECTRICAL</li>
-              <li>Ceiling Fans/Lights</li>
-              <li>Switches and Outlets</li>          
+              <li>Ceiling Fans & Lights</li>
+              <li>Switches & Outlets</li>          
             </ul>  
 
             <ul>
               <li>PLUMBING</li>
               <li>Sinks & Faucets</li>
-              <li>Floats and Valves</li>
-              <li>Toilets and Wax Rings</li>
+              <li>Floats & Valves</li>
+              <li>Toilets & Wax Rings</li>
             </ul>
 
             <ul>
@@ -41,7 +41,7 @@ export default function Home() {
               <li>Auto , Boat , RVs</li>
             </ul>
         </article>
-        <article className="flex mx-auto max-w-xl px-4 py-8 sm:px-6 sm:py-16 lg:max-w-7xl lg:px-8 space-x-3">
+        <article className="flex mx-auto max-w-xl px-4 py-4 sm:px-6 sm:py-6 lg:max-w-7xl lg:px-8 space-x-3">
         <ul>
               <li>ASSEMBLY</li>
               <li>IKEA</li>
@@ -53,7 +53,8 @@ export default function Home() {
 
             <ul>
               <li>HAULING</li>
-              <li>Pick ups and Assemble</li>
+              <li>Personal Service</li>
+              <li>Pick ups & Assembly</li>
               <li>Deliveries</li>
               <li>Hot Shot</li>
             </ul>
@@ -64,6 +65,12 @@ export default function Home() {
               <li>Make Ready</li>
               <li>Home & Auto</li>
             </ul>
+            <ul>
+              <li>MOUNTING</li>
+              <li>TV & Sound System</li>
+              <li>Shelving</li>
+              <li>Art & Mirrors</li>
+            </ul>            
         </article>
 
       </section>
