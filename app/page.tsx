@@ -20,85 +20,85 @@ export default function Home() {
       <h1 className="text-5xl py-8 sm:py-8" >Handyman Extraordinaire</h1>  
       <h2 className="text-2lg">Services ranging from but not limited to:</h2>
 
-        <article className="grid grid-cols-3 gap-4 mx-auto max-w-xl 
+        <article className="grid grid-cols-3 gap-7 mx-auto max-w-xxl 
             px-2 py-8 sm:px-2 sm:py-16 lg:max-w-7xl lg:px-8 space-x-3">             
             <ul>
               <li>ELECTRICAL</li>
-              <li>Ceiling Fans & Lights</li>
-              <li>Switches & Outlets</li>  
-              <li>Smoke Detectors</li>
+              <li>ceiling fans & lights</li>
+              <li>switches & outlets</li>  
+              <li>smoke detectors</li>
             </ul>
             <ul>
               <li>PLUMBING</li>
-              <li>Sinks & Faucets</li>
-              <li>Floats & Valves</li>
-              <li>Toilets & Wax Rings</li>
+              <li>sinks & faucets</li>
+              <li>floats & valves</li>
+              <li>toilets & wax rings</li>
             </ul>
             <ul>
               <li>MOUNTING</li>
-              <li>TV & Sound System</li>
-              <li>Shelving</li>
-              <li>Art & Mirrors</li>
-              <li>Hand & Shower rails</li>
+              <li>tv & sound system</li>
+              <li>shelving</li>
+              <li>art & mirrors</li>
+              <li>hand & shower rails</li>
             </ul>
             <ul>
               <li>PRESSURE WASH</li>
-              <li>Residential</li>
-              <li>Commercial</li>
-              <li>Auto & RV </li> 
-              <li>Boat & Dock</li>
+              <li>residential</li>
+              <li>commercial</li>
+              <li>auto & RV </li> 
+              <li>boat & dock</li>
             </ul>
             <ul>
               <li>ASSEMBLY</li>
-              <li>Office pieces</li>
-              <li>Furniture</li>
-              <li>Trampolines</li>
-              <li>Sports Equiptment</li>
-              <li>Playscapes</li>          
+              <li>office pieces</li>
+              <li>furniture</li>
+              <li>trampolines</li>
+              <li>sports equiptment</li>
+              <li>playscapes</li>          
             </ul>
             <ul>
               <li>HAULING</li>
-              <li>Help Moving</li>
-              <li>Pickups</li>
-              <li>Deliveries</li>
-              <li>Hot Shot</li>
+              <li>help moving</li>
+              <li>pickups</li>
+              <li>deliveries</li>
+              <li>hot shot</li>
             </ul>
             <ul>
               <li>CLEANING</li>
-              <li>Construction</li>
-              <li>Make Ready</li>
-              <li>Home & Auto</li>
+              <li>construction</li>
+              <li>make ready (rentals)</li>
+              <li>home & auto</li>
             </ul>
             <ul>
               <li>HOME REPAIRS</li>
-              <li>Flashing & Trim</li>
-              <li>Drywall patching</li>
-              <li>Calking & Grout</li>    
-              <li>Door Locks & Frame</li>        
+              <li>flashing & trim</li>
+              <li>drywall patching</li>
+              <li>calking & grout</li>    
+              <li>door locks & frame</li>        
             </ul>               
             <ul>
               <li>WELDING</li>
-              <li>Fence repairs</li>
-              <li>Railing repairs</li> 
-              <li>Gate repairs</li>         
+              <li>fence repairs</li>
+              <li>railing repairs</li> 
+              <li>gate repairs</li>         
             </ul> 
             <ul>
               <li>AUTOMOTIVE</li>
-              <li>Tune Ups</li>
-              <li>Tire , Battery & Lights</li>
-              <li>Simple repairs</li>
+              <li>tune ups</li>
+              <li>tire , battery & lights</li>
+              <li>simple repairs</li>
             </ul> 
             <ul>
               <li>LANDSCAPING</li>
-              <li>Cuts, Edge & Clean</li>
-              <li>Mulching & Weeding</li>
-              <li>Clearing & DeStump</li>            
+              <li>cuts, edge & clean</li>
+              <li>mulching & weeding</li>
+              <li>clearing & de-stump</li>            
             </ul>
             <ul>
               <li>DEMOLITION</li>
-              <li>Bathrooms</li>
-              <li>Kitchens</li>
-              <li>Decks & Stairs</li>            
+              <li>bathrooms</li>
+              <li>kitchens</li>
+              <li>decks & stairs</li>            
             </ul>
         </article>
 
