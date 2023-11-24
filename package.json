@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@vercel/analytics": "^1.1.1",
     "@vercel/node": "^3.0.7",
     "@vercel/postgres": "^0.5.1",
     "next": "^14.0.1",
