@@ -7,7 +7,7 @@ const inter = Inter( { subsets: [ 'latin' ] } )
 
 export const metadata: Metadata = {
   title: 'Handyman and Specialized Services',
-  description: 'Abilene Area Contractors Serving Greater Texas',
+  description: 'Abilene Area Contractors',
 }
 
 export default function RootLayout( { children, } : {
