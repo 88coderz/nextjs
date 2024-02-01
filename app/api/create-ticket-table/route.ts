@@ -1,5 +1,5 @@
 import { sql } from '@vercel/postgres';
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 
 interface Request {
    ticket_num: number;
@@ -14,7 +14,10 @@ interface Response {
    
 }
  
-export async function POST(request: Request, response: Response) {
+export async function POST(
+   request: Request | NextRequest, 
+   response: Response | NextResponse,
+   ) {
   try {
    const result = await sql ` CREATE TABLE Ticket ( 
       ticket_num  varchar ( 255 ) ,
