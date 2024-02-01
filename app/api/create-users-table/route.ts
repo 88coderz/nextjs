@@ -1,5 +1,5 @@
 import { sql } from '@vercel/postgres';
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 
 interface Request {
   created_at: string;
@@ -14,8 +14,8 @@ interface Response {
 }
  
 export async function POST(
-    request: Request   , 
-    response: Response ,
+    request: Request | NextRequest   , 
+    response: Response | NextResponse,
   ) {
   try {
     const newUser = await sql`CREATE TABLE User ( 
