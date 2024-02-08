@@ -1,3 +1,7 @@
+// https://nextjs.org/docs/app/api-reference/file-conventions/route
+
+// https://nextjs.org/docs/app/api-reference/functions/next-request
+
 import { sql } from '@vercel/postgres';
 import { NextRequest, NextResponse } from 'next/server';
 
@@ -8,17 +12,22 @@ interface Request {
    client_id:    string;
    category:     string;   
    completed:    boolean;
-   
+   privatePost:  boolean;
+
 }
 
 interface Response {
+
    
 }
  
-export default async function POST(
-   request:   Request | NextRequest  , 
-   response: Response | NextResponse ,
+export async function POST(
+
+   request:  Request  | NextRequest, 
+   response: Response | NextResponse,
+
    ) {
+
   try {
    const result = await sql ` CREATE TABLE Ticket ( 
       ticket_num  varchar ( 255 ) ,
@@ -27,16 +36,14 @@ export default async function POST(
       client_id   varchar ( 255 ) , 
       category    varchar ( 255 ) ,
       completed   varchar ( 255 ) ,
+      privatePost varchar ( 255 ) ,
+
       ); ` ; 
 
-      return  NextResponse.json( 
-         { result } ,  { status: 200 }  ) ;
+      return  NextResponse.json( { result } ,  { status: 200 }  ) ;
 
-  }   catch ( error ) {        
-
-     return NextResponse.json( 
-      { error }, { status: 500 } );    
-
+  }   catch ( error ) {          
+     return NextResponse.json( { error }, { status: 500 } );    
    } 
 };
 
