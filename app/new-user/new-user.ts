@@ -1,7 +1,6 @@
 // https://www.typescriptlang.org/docs/handbook/2/classes.html
 
     class NewUser {
-
         
             location: string;
             auth: boolean;
@@ -25,11 +24,9 @@
             this.auth = auth,
             this.associatedTickets = associatedTickets,
             this.avitar = avitar ,
-            this.userName = userName ; 
-        
+            this.userName = userName ;         
             
-        }
-      
+        }      
     }
     
 

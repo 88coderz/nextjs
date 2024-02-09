@@ -3,7 +3,6 @@
 // https://nextjs.org/docs/app/api-reference/file-conventions/route
 // https://nextjs.org/docs/app/api-reference/functions/next-request
 
-
 import { sql } from '@vercel/postgres';
 import { NextRequest, NextResponse } from 'next/server';
 
@@ -13,7 +12,6 @@ interface Request {
   user:          string;
   client_id:     string;
   location:      string;
-
 }
 
 interface Response {
