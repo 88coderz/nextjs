@@ -23,10 +23,16 @@ export async function POST(
     response: Response | NextResponse  ,
   ) {
   try {
-    const newUser = await sql ` CREATE TABLE User ( 
-      name             varchar ( 255 ), 
-      contact_info     varchar ( 255 ),
 
+    
+
+    const newUser = await sql ` CREATE TABLE User ( 
+      name             VARCHAR ( 255 ) NOT NULL , 
+      email            VARCHAR ( 255 ) NOT NULL ,
+      phone-num        VARCHAR ( 255 ) NOT NULL ,
+      client_id        INT NOT NULL PRIMARY KEY ,
+      is_new_user      BOOLEAN NOT NULL DEFAULT TRUE ,
+      
       );`;    
 
       return NextResponse.json(
