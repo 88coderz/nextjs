@@ -26,13 +26,10 @@ export default function CreateNewUser():any {
         this.userName = userName ;         
         
         }      
-    }
-
-    
+    }    
 
     return  NewUser
-
-
+ 
 }
 
 

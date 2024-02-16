@@ -19,14 +19,13 @@ interface Response {
 }
  
 export async function POST(
+
     request:   Request | NextRequest   , 
     response: Response | NextResponse  ,
+
   ) {
-  try {
-
     
-
-    const newUser = await sql ` CREATE TABLE User ( 
+  try { const newUser = await sql ` CREATE TABLE User ( 
       name             VARCHAR ( 255 ) NOT NULL , 
       email            VARCHAR ( 255 ) NOT NULL ,
       phone-num        VARCHAR ( 255 ) NOT NULL ,

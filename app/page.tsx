@@ -1,6 +1,7 @@
-import Hero  from './hero' ;
+import Hero from './welcome/page' ;
+import Chat from './chat/page' ;
 
-export default function Home( ) {
+export default function Home() {
   return (    
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
 
@@ -9,7 +10,7 @@ export default function Home( ) {
       <section className="relative place-items-center before:absolute before:h-[200px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial  before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
 
       <h1 className="text-5xl py-8 sm:py-8">
-         Handyman Extraordinaire</h1>  
+         Handyman Extraordinaire </h1>  
       <h2 className="text-2lg">
           Services ranging from but not limited to:</h2>
 
@@ -108,7 +109,7 @@ export default function Home( ) {
               -&gt;  </span>
           </h2>
           <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            List what you need done and contractors can make bids!
+            List what you need done and contractors can make bids! You can also make a paywall for the suggestions you give, basically get paid to give answers !
           </p>
         </a>
 
@@ -149,6 +150,8 @@ export default function Home( ) {
           </p>
         </a>
       </div>
+
+      Chat()
     </main>
   )
 }
