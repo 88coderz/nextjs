@@ -1,4 +1,4 @@
-
+ 
 export default function Home() {
   return (    
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
@@ -13,7 +13,7 @@ export default function Home() {
     className="fixed right-5 w-6 h-6 " ><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" /> </svg>       
 
 
-      <a href="#" className=" fixed right-3text-sm font-semibold leading-6 text-gray-900">Log in <span aria-hidden="true">&rarr;</span></a>
+      <a href="#" className=" fixed right-3 text-sm font-semibold leading-6 text-gray-900">Log in <span aria-hidden="true">&rarr;</span></a>
   
 
     </p>
