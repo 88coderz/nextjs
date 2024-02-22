@@ -1,3 +1,5 @@
+
+/*  
 import { useState } from 'react';
 import { getServerSideProps } from 'next/dist/build/templates/pages'; 
 import './env.local'
@@ -37,3 +39,5 @@ export default function Chat():any {
         } 
     ) 
 } 
+
+*/
