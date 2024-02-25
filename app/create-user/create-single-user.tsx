@@ -30,7 +30,7 @@ let newUser = new NewSingleUser(
 
 )
 const client = new createClient({ 
-  dbConnection = POSTGRES_URL ;
+  dbConnection = POSTGRES_URL 
 }) ;
 
 export default async function handler(
