@@ -20,6 +20,7 @@
         this.userName = userName ;                 
         }      
     }    
+// https://vercel.com/docs/storage/vercel-postgres/sdk#createclient
 import type { NextApiRequest , NextApiResponse } from 'next';
 import { createClient } from '@vercel/postgres' ; 
 import '.env.local' ;
