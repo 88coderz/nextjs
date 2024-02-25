@@ -4,6 +4,8 @@
 
 // https://nextjs.org/docs/app/api-reference/functions/next-request
 
+// https://vercel.com/docs/storage/vercel-postgres/sdk#createclient
+
 import { sql } from '@vercel/postgres';
 import { NextRequest, NextResponse } from 'next/server';
 

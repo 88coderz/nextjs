@@ -1,5 +1,4 @@
 // https://www.typescriptlang.org/docs/handbook/2/classes.html
-export function CreateSingleUser():any {
     class NewSingleUser {         
         location: string;
         auth: boolean;
@@ -21,18 +20,18 @@ export function CreateSingleUser():any {
         this.userName = userName ;                 
         }      
     }    
-    return  NewSingleUser  
-}
-
 import type { NextApiRequest , NextApiResponse } from 'next';
 import { createClient } from '@vercel/postgres' ; 
 import '.env.local' ;
-
 // Individual clients can be created, connected, and disconnected for each query. This method is less efficient than using db and should only be used when a single client is required.
-const client = new createClient({
+let newUser = new NewSingleUser( 
 
+  
 
-});
+)
+const client = new createClient({ 
+  dbConnection = POSTGRES_URL ;
+}) ;
 
 export default async function handler(
     req: NextApiRequest , 
