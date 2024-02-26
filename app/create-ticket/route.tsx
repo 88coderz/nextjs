@@ -23,8 +23,8 @@ interface Response {
  
 export async function POST(
 
-   request:  Request  | NextRequest, 
-   response: Response | NextResponse,
+   request:  NextRequest   | Request, 
+   response: NextResponse  | Response,
 
    ) {
 
