@@ -18,7 +18,11 @@ interface Request {
 }
 
 interface Response {
-  
+  current_user:  boolean;
+  created_at:    string;
+  user:          string;
+  client_id:     string;
+  location:      string;
 }
  
 export async function POST(
