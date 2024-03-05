@@ -12,13 +12,37 @@ export async function POST (
       client_id        INT NOT NULL PRIMARY KEY ,
       is_new_user      BOOLEAN NOT NULL DEFAULT TRUE ,      
       );`;    
+
       return NextResponse.json (
+
         { newUser }, { status: 200 }  );
+
   } catch ( error ) {    
+
     return NextResponse.json (
+
       { error }, { status: 500 }  );
+
   }
 };
+
+// defining datatypes of nextREQ & nextRES 
+
+interface Request {
+  current_user:  boolean;
+  created_at:    string;
+  user:          string;
+  client_id:     string;
+  location:      string;
+}
+//difine nextResponse too ? 
+interface Response {
+  current_user:  boolean;
+  created_at:    string;
+  user:          string;
+  client_id:     string;
+  location:      string;
+} 
 
 // https://vercel.com/docs/storage/vercel-postgres/sdk#createclient
 
@@ -29,17 +53,19 @@ import '.env.local' ;
 const client = createClient( { connectionString: process.env.POSTGRES_URL } ) ;
 
 export default async function handler(
-    req: NextRequest , 
-    res: NextResponse
-    ) {  try { await client.connect();
-
+    req: NextRequest , res: NextResponse ,
+    userExists: boolean , 
+    ) { try { await client.connect();
+    
     switch (req.method) {
       case 'GET':
-        // should this be template or specific chat logs ? 
-
+        // verification user doesn't exist 
+        const userName = await client.query('SELECT 1 FROM users WHERE username = $1', [userExists])
         break;
       case 'POST':
-        // logic goes here
+        // new user info
+        if (!userExists) { NewUser() };
+
 
         break;
       default:

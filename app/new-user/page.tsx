@@ -29,11 +29,11 @@ const VerificationForm = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      { /* 
+      <input placeholder='location' ></input>
+      <input placeholder='email' ></input>
+      <input placeholder='username' ></input>
+      <input placeholder='headline' ></input>
       
-      Email and username input fields 
-      
-      */}
       <button type="submit"> Submit </button>
       { headline && <p> { headline } </p> }
     </form>
