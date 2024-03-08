@@ -1,49 +1,48 @@
 import React, { useState } from 'react';
+import { createClient } from '@vercel/postgres';
+import 'route.ts'
 
-const NewUserForm = () => {
+export default async function NewUserForm () {
+
   const [location, setLocation] = useState('');
   const [auth, useAuth] = useState('');   // token associated with NewUser ? 
   const [email, setEmail] = useState('');
   const [username, setUsername] = useState('');
   const [headline, setHeadline] = useState('');
   
-  type e = { e: string }
+  type e = { e: string } 
+   
+  const response = await fetch('/api/verify', {
 
-  const handleSubmit = async ( e:string ) => {
-    // e.preventDefault();
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email, username }),
 
-    try {
-      const response = await fetch('/api/verify', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, username }),
+  });
 
-      });
+  const data = await response.json();    
+    
+  // https://nextjs.org/docs/app/building-your-application/data-fetching/fetching-caching-and-revalidating
 
-      const data = await response.json();
-      setHeadline(data.Headline);
+  const client = createClient();
+  await client.connect();
 
-    } catch (error) {
-      console.error(error);
-      setHeadline('Error: Something went wrong');
+return (
+  <form id='newUserFormId'
+        action='createClient()'
 
-    }
-  };
- // res , req cycle vs onSubmit   
- // https://nextjs.org/docs/app/building-your-application/data-fetching/fetching-caching-and-revalidating
-  return (
-    <form onSubmit={handleSubmit}> 
+    > 
+
+    <h3> Enter Your User Info </h3> 
+    <h5> this can be changed later too </h5>
+
+    <input id='newUserLocation' type='text' placeholder='location' />
+    <input id='newUserEmail'    type='email' placeholder='email' />
+    <input id='newUserUserName' type='text' placeholder='username' />
+    <input id='newUserHeadLine' type='text' placeholder='headline' />
       
-      <input id='newUserLocation' type='text' placeholder='location' ></input>
-      <input id='newUserEmail'    type='email' placeholder='email' ></input>
-      <input id='newUserUserName' type='text' placeholder='username' ></input>
-      <input id='newUserHeadLine' type='text' placeholder='headline' ></input>
-      
-      <button type="submit"> Submit </button>
-      { headline && <p> { headline } </p> }
+    <button type="submit"> Submit </button>
 
-    </form>
+  </form>
   );
 };
-
-export default NewUserForm;

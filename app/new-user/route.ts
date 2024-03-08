@@ -14,19 +14,11 @@ export async function POST (
       );`;    
 
       return NextResponse.json (
-
         { newUser }, { status: 200 }  );
-
   } catch ( error ) {    
-
-    return NextResponse.json (
-
-      { error }, { status: 500 }  );
-
+    return NextResponse.json ( { error }, { status: 500 } );
   }
-};
-
-// defining datatypes of nextREQ & nextRES 
+}; // defining datatypes of nextREQ & nextRES 
 
 interface Request {
   current_user:  boolean;
@@ -42,34 +34,33 @@ interface Response {
   user:          string;
   client_id:     string;
   location:      string;
-} 
-
-// https://vercel.com/docs/storage/vercel-postgres/sdk#createclient
-
+} // https://vercel.com/docs/storage/vercel-postgres/sdk#createclient
 import { createClient } from '@vercel/postgres' ; 
 import '.env.local' ;
 // Individual clients can be created, connected, and disconnected for each query. This method is less efficient than using db and should only be used when a single client is required.
 
-const client = createClient( { connectionString: process.env.POSTGRES_URL } ) ;
+const newUser = createClient( /* { connectionString: process.env.POSTGRES_URL } */ ) ;
 
 export default async function handler(
     req: NextRequest , res: NextResponse ,
     userExists: boolean , 
-    ) { try { await client.connect();
+    ) { try { 
+      
+      await newUser.connect();
     
     switch (req.method) {
       case 'GET':
         // verification user doesn't exist 
-        const userName = await client.query('SELECT 1 FROM users WHERE username = $1', [userExists])
+        const userName = await newUser.query('SELECT 1 FROM users WHERE username = $1', [userExists])
         break;
       case 'POST':
         // new user info
-        if (!userExists) { NewUser() };
+        if (!userExists) { newUser };
 
 
         break;
       default:
         
-    }    await client.end();
-  } catch (error) {  console.error(error);  }
+    }     
+  } finally { newUser.end(); } 
 }
