@@ -14,6 +14,8 @@ export default async function NewUserForm () {
   
   type e = { e: string } 
    
+  // auth0 ? FIND 3rd PARTY SIGN INs
+  // https://nextjs.org/docs/app/building-your-application/authentication
   const response = await fetch('/api/verify', {
 
     method: 'POST',
@@ -26,14 +28,14 @@ export default async function NewUserForm () {
     
   // https://nextjs.org/docs/app/building-your-application/data-fetching/fetching-caching-and-revalidating
 
+  // https://react.dev/reference/react-dom/components/form
+
   const client = createClient();
   await client.connect();
 
 return (
   <form id='newUserFormId'
-        action='createClient()'
-
-    > 
+        action='createClient()'    > 
 
     <h3> Enter Your User Info </h3> 
     <h5> this can be changed later too </h5>
