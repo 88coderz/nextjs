@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useState } from 'react';
 import { createClient } from '@vercel/postgres';
 import 'route.ts'
