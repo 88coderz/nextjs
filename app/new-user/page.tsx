@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { createClient } from '@vercel/postgres';
-import 'route.ts'
+
 
 export default async function NewUserForm () {
 
