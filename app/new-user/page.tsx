@@ -1,9 +1,10 @@
 'use client' ; import React, { useState } from 'react' ;
-import { authenticate } from '@/app/lib/actions';
+import { authenticate } from '@/app/lib/auth.ts';
 
-export default async function NewUserForm () {
+export async function NewUserForm () {
 
 // https://www.typescriptlang.org/docs/handbook/2/classes.html
+
 class NewSingleUser {   
   location: string;
   auth: boolean;
@@ -38,7 +39,7 @@ constructor (
 return (
 
   <form id='newUserFormId'
-        action='client'    > 
+        action='NewUser'    > 
     <h3> Enter Your User Info </h3> 
     <h5> this can be changed later too </h5>
 
@@ -54,3 +55,13 @@ return (
 
   );
 };
+
+export default function NewUser(NewUserForm){
+
+
+
+  return(
+
+
+  )
+}
