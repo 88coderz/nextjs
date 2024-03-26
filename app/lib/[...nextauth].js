@@ -6,11 +6,7 @@ import TwitterProvider from "next-auth/providers/twitter";
 import AppleProvider from "next-auth/providers/apple";
 
 export const authOptions = {
-
-  // Configure one or more authentication providers
-
   providers: [
-
     GithubProvider({
       clientId: process.env.GITHUB_ID,
       clientSecret: process.env.GITHUB_SECRET,
@@ -27,9 +23,10 @@ export const authOptions = {
             prompt: "consent",
             access_type: "offline",
             response_type: "code"
-        }
-      }
-    }),
+        }      }   , 
+        profile( profile ) {
+          return { role: profile.role ?? "user",  }
+        },}),
     TwitterProvider({
       clientId: process.env.TWITTER_CLIENT_ID,
       clientSecret: process.env.TWITTER_CLIENT_SECRET,
@@ -38,12 +35,24 @@ export const authOptions = {
     AppleProvider({
       clientId: process.env.APPLE_ID,
       clientSecret: process.env.APPLE_SECRET
-    })
+    }),
+    //  Reddit requires authorization every time you go through their page. 
+    //  Only allows one callback URL per Client ID / Client Secret.
+    //  This Provider template only has a one hour access token to it and only has the "identity" scope. If you want to get a refresh token as well you must follow this:
+    RedditProvider({
+      clientId: process.env.REDDIT_CLIENT_ID,
+      clientSecret: process.env.REDDIT_CLIENT_SECRET,
+      authorization: {
+        params: {
+          duration: 'permanent',
+        },
+      },
+    }),  
   
+  ],  
 
-
-  ],
-
-}
+}   
 
 export default NextAuth(authOptions)
+
+//

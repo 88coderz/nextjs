@@ -1,67 +1,73 @@
 'use client' ; import React, { useState } from 'react' ;
 import { authenticate } from '@/app/lib/auth.ts';
 
-export async function NewUserForm () {
-
+export async function NewUserForm ({providers, csrfToken}) {
 // https://www.typescriptlang.org/docs/handbook/2/classes.html
-
 class NewSingleUser {   
-  location: string;
   auth: boolean;
-  associatedTickets: boolean;
-  avitar: boolean;
   email: string ;
   userName: string;
 //  super(): any ;  <<<< when is super() applied ????
 constructor (
-  location = 'Austin, Texas',
   auth = false,
-  associatedTickets = false,
-  avitar = false,
   email = 'insert@email.com',
   userName = 'New User',
 ) {
-  this.location = location,
   this.auth = auth,
-  this.associatedTickets = associatedTickets,
-  this.avitar = avitar ,
   this.email = email , 
   this.userName = userName ;    
   }      
 }      
 
-  const [username, setUsername] = useState('');
-  const [headline, setHeadline] = useState('');  
-  const [email, setEmail] = useState('');
-  const [avitar, setAvitar] = useState('');
-  const [location, setLocation] = useState('');
+const [formData, setFormData] = useState
+
+  const [username, setUsername] = useState(''); 
+  const [email, setEmail]       = useState('');
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevState) => ({ ...prevState, [name]: value }));
+  };
 
 return (
-
   <form id='newUserFormId'
-        action='NewUser'    > 
+        action='NewUser'    
+        onSubmit={ () => /* write expression */ }> 
+
     <h3> Enter Your User Info </h3> 
     <h5> this can be changed later too </h5>
-
-    <input id='newUserLocation' type='text' placeholder='location' required>`${location}`</input>
-    <input id='newUserEmail'    type='email' placeholder='email' required>`${email}`</input>
-    <input id='newUserUserName' type='text' placeholder='username' required>`${username}`</input>
-    <input id='newUserHeadLine' type='text' placeholder='headline'>`${headline}`</input>
-    <input id='newUserAvitar' type='avitar' placeholder='add your image'>`${avitar}`</input>
-      
-    <button type="submit"> Submit </button>
-
+    
+    <label htmlFor='newUserEmail' ></label>
+      <input id='newUserEmail' 
+             type='email' 
+             placeholder='email' 
+             onChange={handleChange}
+             required />
+    
+    <label htmlFor='newUserUserName'></label>
+      <input id='newUserUserName' 
+             type='text' 
+             placeholder='username' 
+             onChange={handleChange}
+             required />
+    
+    <label htmlFor='firstName'>First Name:</label>
+      <input id='firstName' 
+             type='text' 
+             placeholder='insert here' 
+             onChange={handleChange}
+             required/>
+    
+    <label htmlFor='lastName'>Last Name:</label>
+      <input id='lastName' 
+             type='text' 
+             placeholder='insert here' 
+             onChange={handleChange}
+             required/>
+        
+          <button type="submit"> Submit </button>
   </form>
+  );  }; // let counter = <REQUIRED INPUTS> for .button{opacity}
+let NewUser = document.getElementById("newUserFormId")
 
-  );
-};
-
-export default function NewUser(NewUserForm){
-
-
-
-  return(
-
-
-  )
-}
+export default NewUser() { return( ) };

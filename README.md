@@ -1,3 +1,8 @@
-Why am I building this project ? 
 
-I have become concerned after experiencing the massive demand for my services 
+
+https://developer.mozilla.org/en-US/docs/Web/API/FormData
+
+https://vercel.com/docs/projects/environment-variables
+
+https://authjs.dev/getting-started/providers/oauth-tutorial
+
