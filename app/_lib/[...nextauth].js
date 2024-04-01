@@ -1,10 +1,9 @@
-import NextAuth from "next-auth"
+import NextAuth from "next-auth" //     <=== IMPORTANT VAR
 import GithubProvider from "next-auth/providers/github"
 import FacebookProvider from "next-auth/providers/facebook";
 import GoogleProvider from "next-auth/providers/google";
 import TwitterProvider from "next-auth/providers/twitter";
 import AppleProvider from "next-auth/providers/apple";
-
 export const authOptions = {
   providers: [
     GithubProvider({
@@ -38,7 +37,8 @@ export const authOptions = {
     }),
     //  Reddit requires authorization every time you go through their page. 
     //  Only allows one callback URL per Client ID / Client Secret.
-    //  This Provider template only has a one hour access token to it and only has the "identity" scope. If you want to get a refresh token as well you must follow this:
+    //  This Provider template only has a one hour access token to it and only has the "identity" scope. 
+    //  If you want to get a refresh token as well you must follow this:
     RedditProvider({
       clientId: process.env.REDDIT_CLIENT_ID,
       clientSecret: process.env.REDDIT_CLIENT_SECRET,
@@ -48,11 +48,6 @@ export const authOptions = {
         },
       },
     }),  
-  
   ],  
-
 }   
-
 export default NextAuth(authOptions)
-
-//
