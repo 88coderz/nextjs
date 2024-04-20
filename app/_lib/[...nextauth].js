@@ -35,7 +35,7 @@ export const authOptions = {
       clientId: process.env.APPLE_ID,
       clientSecret: process.env.APPLE_SECRET
     }),
-    //  Reddit requires authorization every time you go through their page. 
+    //  Reddit requires auth EVERYTIME you go through their page. 
     //  Only allows one callback URL per Client ID / Client Secret.
     //  This Provider template only has a one hour access token to it and only has the "identity" scope. 
     //  If you want to get a refresh token as well you must follow this:

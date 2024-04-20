@@ -1,10 +1,10 @@
-'use client' ; 
+ 'use client' ; 
 import React, { useState } from 'react' ;
 import { authenticate } from '@/app/_lib/auth';
 import { useFormState } from 'react-dom';
 // https://react.dev/reference/react-dom/hooks/useFormState#using-information-returned-by-a-form-action
 
-export async function NewUserForm ( {providers, csrfToken} ) {
+async function NewUserForm ( { providers, csrfToken } ) {
 // https://www.typescriptlang.org/docs/handbook/2/classes.html
 class NewSingleUser {   
   auth: boolean;
@@ -26,9 +26,10 @@ const [ username, setUsername ] = useState('');
 const [ email, setEmail ]       = useState('');
 const [ state, newUser ]     = useFormState( authenticate, null );
 
-  const handleChange = (e) => {    const { name , value } = e.target;
-    setFormData( ( prevState ) => ( { ...prevState, [ name ]: value } ) );  };
+  const handleChange = (e: any) => { const { name , value } = e.target;
+    setFormData( ( State ) => ( { ...State, [ name ]: value } ) );  };
 
+// let NewUserCreatedOrNot = verifiedUserCreated ? https://node-postgres.com/apis/result : RetryNewUserInfo
 
 return (
   <form id='newUserFormId'
@@ -68,9 +69,6 @@ return (
         
           <button type="submit"> Submit </button>
   </form>
-  );  }; // let counter = <REQUIRED INPUTS> for .button{opacity}
-let NewUser = document.getElementById("newUserFormId")
+  );  
+}; 
 
-// let NewUserCreatedOrNot = verifiedUserCreated ? https://node-postgres.com/apis/result : RetryNewUserInfo
-
-export default NewUser() { return( ) };
