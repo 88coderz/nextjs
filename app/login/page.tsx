@@ -8,12 +8,12 @@ export default function Login() {
   return (
 
     <form action={authenticate}>
-
+<label></label>
       <input type="email" 
              name="email" 
              placeholder="Email" 
             required />
-
+<label></label>
       <input type="password" 
              name="password" 
              placeholder="Password" 
