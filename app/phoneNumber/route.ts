@@ -1,12 +1,9 @@
 
-import pool from '../utils/db'; // Replace with your db connection path
+import pool from '../utils/connectPool'; // Replace with your db connection path
 import PhoneNumberSanitize from './phoneNumber';
 
-
-
 export default async function handler(req, res) {
-    if (req.method === 'POST') {
-        
+    if (req.method === 'POST') {        
         const { phoneNumber } = req.body;
 
         try {

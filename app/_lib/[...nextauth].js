@@ -4,6 +4,7 @@ import FacebookProvider from "next-auth/providers/facebook";
 import GoogleProvider from "next-auth/providers/google";
 import TwitterProvider from "next-auth/providers/twitter";
 import AppleProvider from "next-auth/providers/apple";
+
 export const authOptions = {
   providers: [
     GithubProvider({
