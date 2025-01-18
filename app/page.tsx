@@ -103,7 +103,7 @@ export default function Home() {
       </section>
       
       <h6 className="text-5xl py-8 sm:py-8" >whats being built</h6>  
-      <h2 className="text-2lg py-1">https://www.github.com/88coderz/nextjs</h2>
+      <h2 className="text-2lg py-1">https://www.github.com/88coderz</h2>
 
       <div className="mt-9 mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
 
